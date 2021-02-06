@@ -27,3 +27,7 @@ Added `ColorPalette` classes, for keeping a consistent color scheme throughought
 ## 1.0.6
 
 Added `ResponsiveGridLayout` class, to automatically make grid children fit to a certain row and column count.
+
+## 1.0.7
+
+Added `MatchSafeArea` class, to automatically resize a RectTransform to the screen's safe area. This is useful for notched devices like the iPhone X, etc.
