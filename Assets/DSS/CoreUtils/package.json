@@ -1,7 +1,7 @@
 {
     "name": "com.dss.core-utils",
     "displayName": "Core Utils",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "unity": "2018.3",
     "description": "A collection of common utilities, extension methods, and helper classes.",
     "keywords": [

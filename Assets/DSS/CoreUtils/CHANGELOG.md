@@ -19,3 +19,7 @@ Added `ResponsiveMultiLayoutGroup` class to modify a `MultiLayoutGroup`'s `direc
 ## 1.0.4
 
 Renamed `MultiLayoutGroup` to `BidirectionalLayoutGroup`, as it better describes the classes intended function.
+
+## 1.0.5
+
+Added `ColorPalette` classes, for keeping a consistent color scheme throughought a project.
