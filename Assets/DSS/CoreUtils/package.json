@@ -1,0 +1,17 @@
+{
+    "name": "com.dss.unity-core-utils",
+    "displayName": "Unity Core Utils",
+    "version": "1.0.0",
+    "unity": "2018.3",
+    "description": "A collection of common Unity utilities, extension methods, and helper classes.",
+    "keywords": [
+        "utilities",
+        "extensions",
+        "helpers"
+    ],
+    "author": {
+        "name" : "Dan Shervheim",
+        "email" : "danielshervheim@gmail.com",
+        "url" : "http://danielshervheim.com/"
+    }
+}
