@@ -15,3 +15,7 @@ Added `MultiLayoutGroup` class.
 ## 1.0.3
 
 Added `ResponsiveMultiLayoutGroup` class to modify a `MultiLayoutGroup`'s `direction` property based on the device's aspect ratio.
+
+## 1.0.4
+
+Renamed `MultiLayoutGroup` to `BidirectionalLayoutGroup`, as it better describes the classes intended function.

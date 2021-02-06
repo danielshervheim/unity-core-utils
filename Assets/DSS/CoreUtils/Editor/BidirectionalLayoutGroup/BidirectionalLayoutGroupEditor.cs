@@ -4,9 +4,9 @@ using UnityEditor.UI;
 
 namespace DSS.Layout
 {
-    [CustomEditor(typeof(MultiLayoutGroup), true)]
+    [CustomEditor(typeof(BidirectionalLayoutGroup), true)]
     [CanEditMultipleObjects]
-    public class MultiLayoutGroupEditor : HorizontalOrVerticalLayoutGroupEditor
+    public class BidirectionalLayoutGroupEditor : HorizontalOrVerticalLayoutGroupEditor
     {
         SerializedProperty m_direction;
 

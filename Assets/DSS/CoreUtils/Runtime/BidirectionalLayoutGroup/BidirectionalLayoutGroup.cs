@@ -5,7 +5,7 @@ namespace DSS.Layout
 {
     // @brief A layout group that mimics both a horizontal and a
     // vertical layout group, depending on the specified direction.
-    public class MultiLayoutGroup : HorizontalOrVerticalLayoutGroup
+    public class BidirectionalLayoutGroup : HorizontalOrVerticalLayoutGroup
     {
         public enum LayoutDirection { Horizontal, Vertical };
         
@@ -60,6 +60,6 @@ namespace DSS.Layout
 
 
         // Prevents errant constructor use.
-        protected MultiLayoutGroup() { }
+        protected BidirectionalLayoutGroup() { }
     }
 }

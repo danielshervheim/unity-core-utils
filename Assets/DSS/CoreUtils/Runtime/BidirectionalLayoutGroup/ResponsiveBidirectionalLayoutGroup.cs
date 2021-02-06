@@ -1,15 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-using Direction = DSS.Layout.MultiLayoutGroup.LayoutDirection;
+using Direction = DSS.Layout.BidirectionalLayoutGroup.LayoutDirection;
 
 namespace DSS.Layout
 {
-    // @brief Overrides a MultiLayoutGroup's direction property in response
-    // to the device's aspect ratio.
-    [RequireComponent(typeof(MultiLayoutGroup))]
+    // @brief Overrides a BidirectionalLayoutGroup's direction property
+    // in response to the device's aspect ratio.
+    [RequireComponent(typeof(BidirectionalLayoutGroup))]
     [ExecuteInEditMode]
-    public class ResponsiveMultiLayoutGroup : MonoBehaviour
+    public class ResponsiveBidirectionalLayoutGroup : MonoBehaviour
     {   
         // @brief Which layout direction to follow in portrait mode.
         [SerializeField] Direction portraitDirection = Direction.Vertical;
@@ -19,13 +19,13 @@ namespace DSS.Layout
 
         int m_width = 0;
         int m_height = 0;
-        MultiLayoutGroup target = null;
+        BidirectionalLayoutGroup target = null;
 
         void Update()
         {
             if (target == null)
             {
-                target = GetComponent<MultiLayoutGroup>();
+                target = GetComponent<BidirectionalLayoutGroup>();
             }
 
             if (Screen.width != m_width || Screen.height != m_height)
