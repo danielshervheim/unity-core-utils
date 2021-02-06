@@ -17,5 +17,19 @@ someRectTransformInstance.SetLeft(50f);
 
 ### BidirectionalLayoutGroup
 
-- TODO: write this.
-- TODO: also explain ResponsiveBidirectionalLayoutGroup
+- BidirectionalLayoutGroup
+- ResponsiveBidirectionalLayoutGroup
+
+### ColorPalettes
+
+- ColorPalette
+- ColorPaletteContainer
+- ApplyColorPalette
+
+### MatchSafeArea
+
+- MatchSafeArea
+
+### ResponsiveGridLayoutGroup
+
+- ResponsiveGridLayoutGroup
