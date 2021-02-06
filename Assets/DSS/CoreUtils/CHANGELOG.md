@@ -23,3 +23,7 @@ Renamed `MultiLayoutGroup` to `BidirectionalLayoutGroup`, as it better describes
 ## 1.0.5
 
 Added `ColorPalette` classes, for keeping a consistent color scheme throughought a project.
+
+## 1.0.6
+
+Added `ResponsiveGridLayout` class, to automatically make grid children fit to a certain row and column count.
