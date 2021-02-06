@@ -7,3 +7,11 @@ Initial release.
 ## 1.0.1
 
 Changed package name from "UnityCoreUtils" to "CoreUtils".
+
+## 1.0.2
+
+Added `MultiLayoutGroup` class.
+
+## 1.0.3
+
+Added `ResponsiveMultiLayoutGroup` class to modify a `MultiLayoutGroup`'s `direction` property based on the device's aspect ratio.

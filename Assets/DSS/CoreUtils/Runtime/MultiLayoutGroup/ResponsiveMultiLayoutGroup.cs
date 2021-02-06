@@ -1,0 +1,42 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+using Direction = DSS.Layout.MultiLayoutGroup.LayoutDirection;
+
+namespace DSS.Layout
+{
+    // @brief Overrides a MultiLayoutGroup's direction property in response
+    // to the device's aspect ratio.
+    [RequireComponent(typeof(MultiLayoutGroup))]
+    [ExecuteInEditMode]
+    public class ResponsiveMultiLayoutGroup : MonoBehaviour
+    {   
+        // @brief Which layout direction to follow in portrait mode.
+        [SerializeField] Direction portraitDirection = Direction.Vertical;
+
+        // @brief Which layout direction to follow in landscape mode.
+        [SerializeField] Direction landscapeDirection = Direction.Horizontal;
+
+        int m_width = 0;
+        int m_height = 0;
+        MultiLayoutGroup target = null;
+
+        void Update()
+        {
+            if (target == null)
+            {
+                target = GetComponent<MultiLayoutGroup>();
+            }
+
+            if (Screen.width != m_width || Screen.height != m_height)
+            {   
+                m_width = Screen.width;
+                m_height = Screen.height;
+
+                float aspectRatio = (float)m_width / (float)m_height;
+
+                target.SetDirection((aspectRatio < 1f) ? portraitDirection : landscapeDirection);
+            }
+        }
+    }
+}
