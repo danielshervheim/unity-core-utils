@@ -35,3 +35,7 @@ Added `MatchSafeArea` class, to automatically resize a RectTransform to the scre
 ## 1.0.8
 
 Added `SetTargetFrameRate` component to automatically set the applications target frame rate.
+
+## 1.0.9
+
+Added `OnStartEvent` to expose an onStart event to the editor that other classes can hook into.

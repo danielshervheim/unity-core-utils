@@ -37,3 +37,7 @@ someRectTransformInstance.SetLeft(50f);
 ### SetTargetFrameRate
 
 - SetTargetFrameRate
+
+### OnStartEvent
+
+- OnStartEvent
