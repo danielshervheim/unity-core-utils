@@ -33,3 +33,7 @@ someRectTransformInstance.SetLeft(50f);
 ### ResponsiveGridLayoutGroup
 
 - ResponsiveGridLayoutGroup
+
+### SetTargetFrameRate
+
+- SetTargetFrameRate

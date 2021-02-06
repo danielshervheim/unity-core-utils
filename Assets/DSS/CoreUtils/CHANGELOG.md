@@ -31,3 +31,7 @@ Added `ResponsiveGridLayout` class, to automatically make grid children fit to a
 ## 1.0.7
 
 Added `MatchSafeArea` class, to automatically resize a RectTransform to the screen's safe area. This is useful for notched devices like the iPhone X, etc.
+
+## 1.0.8
+
+Added `SetTargetFrameRate` component to automatically set the applications target frame rate.
