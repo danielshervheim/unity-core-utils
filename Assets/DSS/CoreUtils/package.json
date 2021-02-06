@@ -1,9 +1,9 @@
 {
-    "name": "com.dss.unity-core-utils",
-    "displayName": "Unity Core Utils",
-    "version": "1.0.0",
+    "name": "com.dss.core-utils",
+    "displayName": "Core Utils",
+    "version": "1.0.1",
     "unity": "2018.3",
-    "description": "A collection of common Unity utilities, extension methods, and helper classes.",
+    "description": "A collection of common utilities, extension methods, and helper classes.",
     "keywords": [
         "utilities",
         "extensions",
