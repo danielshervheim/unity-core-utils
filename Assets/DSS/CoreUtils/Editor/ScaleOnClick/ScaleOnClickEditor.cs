@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 
-namespace DSS.ScaleOnClick
+namespace DSS.CoreUtils
 {
     [CustomEditor(typeof(ScaleOnClick), true)]
     public class ScaleOnClickEditor : Editor

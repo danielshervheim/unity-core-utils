@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 
-namespace DSS.MatchSafeArea
+namespace DSS.CoreUtils
 {
     [CustomEditor(typeof(MatchSafeArea), true)]
     public class MatchSafeAreaEditor : Editor

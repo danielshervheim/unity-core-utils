@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace DSS.ResponsiveGridLayoutGroup
+namespace DSS.CoreUtils
 {
     // @brief Lays out elements in a grid with specific column and row counts.
     public class ResponsiveGridLayoutGroup : GridLayoutGroup

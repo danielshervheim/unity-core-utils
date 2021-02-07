@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace DSS.Tweener
+namespace DSS.CoreUtils
 {
     // @brief An abstract class that handles the boilerplate of
     // tweening an object between two states (A, and B) over time.

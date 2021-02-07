@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace DSS.ResponsiveGridLayoutGroup
+namespace DSS.CoreUtils
 {
     [CustomEditor(typeof(ResponsiveGridLayoutGroup), true)]
     [CanEditMultipleObjects]

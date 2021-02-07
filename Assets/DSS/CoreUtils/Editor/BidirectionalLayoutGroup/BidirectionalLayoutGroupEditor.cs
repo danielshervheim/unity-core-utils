@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEditor.UI;
 
-namespace DSS.BidirectionalLayoutGroup
+namespace DSS.CoreUtils
 
 {
     [CustomEditor(typeof(BidirectionalLayoutGroup), true)]

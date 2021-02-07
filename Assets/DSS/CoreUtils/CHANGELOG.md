@@ -48,3 +48,7 @@
 ## 1.0.11
 
 - Changed `BidirectionalLayoutGroup` and associated classes from namespace `Layout` to `BidirectionalLayoutGroup`.
+
+## 1.0.12
+
+- Moved most classes into common `DSS.CoreUtils` namespace.

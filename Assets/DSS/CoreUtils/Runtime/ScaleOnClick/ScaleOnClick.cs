@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
-using DSS.Tweener;
 
-namespace DSS.ScaleOnClick
+namespace DSS.CoreUtils
 {
-    public class ScaleOnClick : Tweener.Tweener, IPointerDownHandler, IPointerUpHandler
+    public class ScaleOnClick : Tweener, IPointerDownHandler, IPointerUpHandler
     {
         // A = unclicked, B = clicked.
 
