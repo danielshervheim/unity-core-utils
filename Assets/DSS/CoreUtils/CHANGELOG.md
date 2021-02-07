@@ -52,3 +52,7 @@
 ## 1.0.12
 
 - Moved most classes into common `DSS.CoreUtils` namespace.
+
+## 1.0.13
+
+- Fixed logic error in Tweener.

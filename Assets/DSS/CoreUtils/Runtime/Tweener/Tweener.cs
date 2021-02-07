@@ -40,11 +40,18 @@ namespace DSS.CoreUtils
         // @brief Start tweening towards A.
         protected void ToA()
         {
-            if (transition && IsInteruptable())
+            if (transition)
             {
-                StopCoroutine(routine);
+                if (IsInteruptable())
+                {
+                    StopCoroutine(routine);
+                }
+                else
+                {
+                    return;
+                }
             }
-            else if ((transition && !IsInteruptable()) || state == State.A)
+            else if (state == State.A)
             {
                 return;
             }
@@ -56,11 +63,18 @@ namespace DSS.CoreUtils
         // @brief Start tweening towards B.
         protected void ToB()
         {
-            if (transition && IsInteruptable())
+            if (transition)
             {
-                StopCoroutine(routine);
+                if (IsInteruptable())
+                {
+                    StopCoroutine(routine);
+                }
+                else
+                {
+                    return;
+                }
             }
-            else if ((transition && !IsInteruptable()) || state == State.B)
+            else if (state == State.B)
             {
                 return;
             }
