@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace DSS.Layout
+namespace DSS.BidirectionalLayoutGroup
 {
     // @brief A layout group that mimics both a horizontal and a
     // vertical layout group, depending on the specified direction.

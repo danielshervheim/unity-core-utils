@@ -44,3 +44,7 @@
 
 - Added `Tweener` class and example implementations for tweening objects between two states.
 - Added a custom editor window for the `ApplyColorPalette` component. 
+
+## 1.0.11
+
+- Changed `BidirectionalLayoutGroup` and associated classes from namespace `Layout` to `BidirectionalLayoutGroup`.

@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-using Direction = DSS.Layout.BidirectionalLayoutGroup.LayoutDirection;
+using Direction = DSS.BidirectionalLayoutGroup.BidirectionalLayoutGroup.LayoutDirection;
 
-namespace DSS.Layout
+namespace DSS.BidirectionalLayoutGroup
 {
     // @brief Overrides a BidirectionalLayoutGroup's direction property
     // in response to the device's aspect ratio.

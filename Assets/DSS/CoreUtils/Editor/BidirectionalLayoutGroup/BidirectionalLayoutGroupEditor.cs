@@ -2,7 +2,8 @@
 using UnityEditor;
 using UnityEditor.UI;
 
-namespace DSS.Layout
+namespace DSS.BidirectionalLayoutGroup
+
 {
     [CustomEditor(typeof(BidirectionalLayoutGroup), true)]
     [CanEditMultipleObjects]
