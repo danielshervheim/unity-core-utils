@@ -1,5 +1,3 @@
-// QualitySettings.vSyncCount = 1;
-
 using UnityEngine;
 using UnityEditor;
 
