@@ -56,3 +56,7 @@
 ## 1.0.13
 
 - Fixed logic error in Tweener.
+
+## 1.0.14
+
+- Added `OpenURL` class.
