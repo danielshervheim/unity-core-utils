@@ -148,6 +148,15 @@ namespace DSS.Extensions
         {
             return rt.anchorMax.y;
         }
+
+        // @brief Expands the RectTransform to its parent.
+        public static void Expand(this RectTransform rt, float padding = 0f)
+        {
+            rt.SetTop(padding);
+            rt.SetBottom(padding);
+            rt.SetLeft(padding);
+            rt.SetRight(padding);
+        }
     }
 
     // Source(s)

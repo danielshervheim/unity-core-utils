@@ -60,3 +60,7 @@
 ## 1.0.14
 
 - Added `OpenURL` class.
+
+## 1.0.15
+
+- Added `TerrainExtensions` and `UpdateTerrainHeightEditorWindow` classes.

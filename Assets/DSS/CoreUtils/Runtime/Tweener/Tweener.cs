@@ -149,5 +149,10 @@ namespace DSS.CoreUtils
             onReachedB.Invoke();
             transition = false;
         }
+
+        public Coroutine GetUnderlyingCoroutine()
+        {
+            return routine;
+        }
     }
 }
