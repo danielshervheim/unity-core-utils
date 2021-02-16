@@ -64,3 +64,7 @@
 ## 1.0.15
 
 - Added `TerrainExtensions` and `UpdateTerrainHeightEditorWindow` classes.
+
+## 1.0.16
+
+- Added `NonNull()` extension method to `ListExtensions`.

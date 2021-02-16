@@ -20,6 +20,20 @@ namespace DSS.Extensions
                 list[n] = value;
             }
         }
+
+        // @brief Returns the sublist of non-null elements in the given list.
+        public static List<T> NonNull<T>(this List<T> list)
+        {
+            List<T> nonNull = new List<T>();
+            foreach (T elem in list)
+            {
+                if (elem != null)
+                {
+                    nonNull.Add(elem);
+                }
+            }
+            return nonNull;
+        }
     }
 
     // Source(s)

@@ -1,7 +1,7 @@
 {
     "name": "DSS.CoreUtils.Editor",
     "references": [
-        "GUID:253c6c45af77746cdb7d026174b3b75e"
+        "DSS.CoreUtils.Runtime"
     ],
     "includePlatforms": [
         "Editor"
