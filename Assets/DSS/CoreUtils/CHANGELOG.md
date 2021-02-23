@@ -68,3 +68,7 @@
 ## 1.0.16
 
 - Added `NonNull()` extension method to `ListExtensions`.
+
+## 1.0.17
+
+- Added `TerrainToMesh` and `MeshToTerrain` extensions.
