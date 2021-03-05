@@ -72,3 +72,7 @@
 ## 1.0.17
 
 - Added `TerrainToMesh` and `MeshToTerrain` extensions.
+
+## 1.0.18
+
+- Split `ColorPalette` and related classes off into it's own [repository](https://github.com/danielshervheim/unity-color-palettes)
