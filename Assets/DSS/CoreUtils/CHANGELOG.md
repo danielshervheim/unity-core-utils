@@ -80,3 +80,7 @@
 ## 1.1.1
 
 - Added `OnKeyCodeCombination` class to listen for certain key press combinations (like the Konami code).
+
+## 1.2.0
+
+- Added `ScreenWatcher` and `AspectRatioConditional` for en/disabling gameObjects based on the screen's aspect ratio.
