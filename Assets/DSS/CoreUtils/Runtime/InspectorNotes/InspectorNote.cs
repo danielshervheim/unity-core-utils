@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace DSS.CoreUtils
+namespace DSS.CoreUtils.InspectorNotes
 {
     public class InspectorNote : MonoBehaviour
     {

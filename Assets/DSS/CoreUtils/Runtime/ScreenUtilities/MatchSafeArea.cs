@@ -1,7 +1,7 @@
 using UnityEngine;
-using static DSS.Extensions.RectTransformExtensions;
+using static DSS.CoreUtils.Extensions.RectTransformExtensions;
 
-namespace DSS.CoreUtils
+namespace DSS.CoreUtils.ScreenUtilities
 {
     // @brief Resizes the attached RectTransform to match the Screen's safe area.
     // (For non-notched devices, this essentially does nothing).

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace DSS.CoreUtils
+namespace DSS.CoreUtils.ScreenUtilities
 {
     // @brief Enables / disables the gameObject based on the screen's aspect ratio.
     // (This is useful for having certain UI elements only appear in portrait vs landscape

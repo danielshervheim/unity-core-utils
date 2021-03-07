@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 
-namespace DSS.CoreUtils
+namespace DSS.CoreUtils.Tweening
 {
     [CustomEditor(typeof(ScaleOnClick), true)]
     public class ScaleOnClickEditor : Editor

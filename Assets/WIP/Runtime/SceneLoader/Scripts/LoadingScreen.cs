@@ -2,9 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-using static DSS.Extensions.RectTransformExtensions;
-using static DSS.Extensions.TransformExtensions;
+using static DSS.CoreUtils.Extensions.RectTransformExtensions;
+using static DSS.CoreUtils.Extensions.TransformExtensions;
+using DSS.CoreUtils.ScreenUtilities;
 using DSS.CoreUtils;
+using DSS.CoreUtils.Tweening;
 
 namespace DSS.SceneLoader
 {

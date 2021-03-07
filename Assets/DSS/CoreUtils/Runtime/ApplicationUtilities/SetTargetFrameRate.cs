@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace DSS.CoreUtils
+namespace DSS.CoreUtils.ApplicationUtilities
 {
     // @brief Sets the Application's target framerate when the scene first loads.
     public class SetTargetFrameRate : MonoBehaviour

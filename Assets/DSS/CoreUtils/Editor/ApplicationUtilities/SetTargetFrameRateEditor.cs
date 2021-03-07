@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 
-namespace DSS.CoreUtils
+namespace DSS.CoreUtils.ApplicationUtilities
 {
     [CustomEditor(typeof(SetTargetFrameRate), true)]
     public class SetTargetFrameRateEditor : Editor

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace DSS.CoreUtils
+namespace DSS.CoreUtils.Tweening
 {
     public class CanvasGroupTweener : Tweener
     {

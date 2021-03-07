@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace DSS.Extensions
+namespace DSS.CoreUtils.Extensions
 {
     // @brief A collection of Transform extension methods.
     public static class TransformExtensions

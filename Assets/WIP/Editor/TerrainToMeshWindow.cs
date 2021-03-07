@@ -4,7 +4,7 @@ using UnityEditor;
 // using System.IO;
 // using UnityEditor.Formats.Fbx.Exporter;
 
-using static DSS.Extensions.TerrainExtensions;
+using static DSS.CoreUtils.Extensions.TerrainExtensions;
 
 namespace DSS.CoreUtils
 {

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 
-namespace DSS.CoreUtils
+namespace DSS.CoreUtils.Tweening
 {
     [CustomEditor(typeof(CanvasGroupTweener), true)]
     public class CanvasGroupTweenerEditor : Editor

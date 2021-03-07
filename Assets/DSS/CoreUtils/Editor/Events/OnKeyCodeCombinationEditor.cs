@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditorInternal;
 
-namespace DSS.CoreUtils
+namespace DSS.CoreUtils.Events
 {
     [CustomEditor(typeof(OnKeyCodeCombination), true)]
     public class OnKeyCodeCombinationEditor : Editor

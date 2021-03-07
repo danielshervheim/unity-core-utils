@@ -88,3 +88,7 @@
 ## 1.2.1
 
 - Added `InspectorNote` class.
+
+## 1.3.0
+
+- Majorly reshuffled and simplified classes into namespaces.

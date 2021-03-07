@@ -1,9 +1,9 @@
 using UnityEditor;
 using UnityEngine;
 
-using static DSS.Extensions.TerrainExtensions;
+using static DSS.CoreUtils.Extensions.TerrainExtensions;
 
-namespace DSS.CoreUtils
+namespace DSS.CoreUtils.TerrainUtilities
 {
     public class MeshToTerrainWindow : EditorWindow
     {

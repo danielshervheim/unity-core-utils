@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 
-namespace DSS.CoreUtils
+namespace DSS.CoreUtils.InspectorNotes
 {
     [CustomEditor(typeof(InspectorNote), true)]
     public class InspectorNoteEditor : Editor

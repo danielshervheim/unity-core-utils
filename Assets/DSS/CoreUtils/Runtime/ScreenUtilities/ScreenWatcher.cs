@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace DSS.CoreUtils
+namespace DSS.CoreUtils.ScreenUtilities
 {
     // @brief Listens for changes in the screen properties.
     // (Useful for UI stuff).

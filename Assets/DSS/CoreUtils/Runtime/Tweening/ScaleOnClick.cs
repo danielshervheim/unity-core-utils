@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace DSS.CoreUtils
+namespace DSS.CoreUtils.Tweening
 {
     public class ScaleOnClick : Tweener, IPointerDownHandler, IPointerUpHandler
     {

@@ -1,4 +1,4 @@
-namespace DSS.Extensions
+namespace DSS.CoreUtils.Extensions
 {
     // @brief A collection of String extension methods.
     public static class StringExtensions
