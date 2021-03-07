@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace DSS.Extensions
+namespace DSS.CoreUtils.Extensions
 {
     // @brief A collection of List extension methods.
     public static class ListExtensions

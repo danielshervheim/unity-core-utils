@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 
 namespace DSS.CoreUtils
 {
+    // @brief Exposes a method to open a URL in the users web browser.
     public class OpenURL : MonoBehaviour
     {
         [SerializeField] string url = "https://www.google.com/";

@@ -84,3 +84,7 @@
 ## 1.2.0
 
 - Added `ScreenWatcher` and `AspectRatioConditional` for en/disabling gameObjects based on the screen's aspect ratio.
+
+## 1.2.1
+
+- Added `InspectorNote` class.

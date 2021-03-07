@@ -1,56 +1,64 @@
 # unity-core
 A collection of common Unity scripts and extensions I've found myself continually rewriting.
 
-## Contents
+## Application Utilities
 
-### Extensions
+Exposes a setter for common `Application.<property>` properties, so they can be set by the event system (Buttons, Toggles, etc).
 
-- TODO: write this.
+- `OpenURL`
+- `Quiter`
+- `SetTargetFrameRate`
 
-```csharp
-// Example usage.
-using static DSS.Extensions.RectTransformExtensions;
+## Events
 
-// Now the following will work.
-someRectTransformInstance.SetLeft(50f);
-```
+Exposes common events to the event system.
 
-### BidirectionalLayoutGroup
+- `OnKeyCodeCombination`
+- `OnStart`
 
-- BidirectionalLayoutGroup
-- ResponsiveBidirectionalLayoutGroup
+## Extensions
 
-### ColorPalettes
+Extends several built in and Unity-specific classes.
 
-- ColorPalette
-- ColorPaletteContainer
-- ApplyColorPalette
+- `ListExtensions`
+- `RectTransformExtensions`
+- `StringExtensions`
+- `TerrainExtensions`
+- `TextAssetExtensions`
+- `TransformExtensions`
 
-### MatchSafeArea
+## Inspector Notes
 
-- MatchSafeArea
+Adds customizable notes to gameObject inspectors in the scene.
 
-### ResponsiveGridLayoutGroup
+- `InspectorNote`
 
-- ResponsiveGridLayoutGroup
+## Layout Utilities
 
-### SetTargetFrameRate
+Helps with common layout paradigms.
 
-- SetTargetFrameRate
+- `BidirectionalLayoutGroup`
+- `ResponsiveBidirectionalLayoutGroup`
+- `ResponsiveGridLayout`
 
-### OnStartEvent
+## Screen Utilities
 
-- OnStartEvent
+Exposes various events for the Screen class.
 
-### Tweener
+- `AspectRatioConditional`
+- `MatchSafeArea`
+- `ScreenWatcher`
 
-- Tweener
-- ScaleOnClick
+## Terrain Utilities
 
-### OpenURL
+Utilities for converting `Terrain` components, and modifying their heights.
 
--
+- `Mesh To Terrain`
+- `Heighten and Deepen`
 
-### Terrain Deepen and Heighten
+## Tweener
 
-- DSS/Terrain/Heighten and Deepen
+Exposes an extensible "Tween" class that tweens between two values, with interuption support.
+
+- `ScaleOnClick`
+- `Tweener`
