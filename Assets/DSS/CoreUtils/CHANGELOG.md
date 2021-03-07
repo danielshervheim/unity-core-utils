@@ -73,6 +73,10 @@
 
 - Added `TerrainToMesh` and `MeshToTerrain` extensions.
 
-## 1.0.18
+## 1.1.0
 
 - Split `ColorPalette` and related classes off into it's own [repository](https://github.com/danielshervheim/unity-color-palettes)
+
+## 1.1.1
+
+- Added `OnKeyCodeCombination` class to listen for certain key press combinations (like the Konami code).
