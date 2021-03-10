@@ -11,7 +11,15 @@ namespace DSS.CoreUtils.InspectorNotes
 
         private void Start()
         {
-            Destroy(this);
+            // Does the same thing, but supresses "variable not used" warnings.
+            if (note.Equals(string.Empty) || type == NoteType.None)
+            {
+                Destroy(this);
+            }
+            else
+            {
+                Destroy(this);
+            }
         }
     }
 }

@@ -42,6 +42,7 @@ Helps with common layout paradigms.
 - `BidirectionalLayoutGroup`
 - `ResponsiveBidirectionalLayoutGroup`
 - `ResponsiveGridLayout`
+- `SnapRect`
 
 ## Screen Utilities
 

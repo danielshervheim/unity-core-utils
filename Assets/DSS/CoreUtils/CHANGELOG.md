@@ -92,3 +92,7 @@
 ## 1.3.0
 
 - Majorly reshuffled and simplified classes into namespaces.
+
+## 1.3.1
+
+- Added `SnapRect` class.
