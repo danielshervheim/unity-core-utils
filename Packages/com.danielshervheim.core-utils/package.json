@@ -1,18 +1,21 @@
 {
-  "name": "com.danielshervheim.core-utils",
+  "author": {
+    "name" : "Daniel Shervheim",
+    "email" : "danielshervheim@gmail.com",
+    "url" : "https://www.danielshervheim.com/"
+  },
+  "description": "A collection of useful Unity extensions and utilities.",
   "displayName": "Core Utils",
-  "version": "1.3.1",
-  "unity": "2018.3",
-  "description": "A collection of common utilities, extension methods, and helper classes.",
   "keywords": [
+    "unity",
     "utilities",
     "extensions",
     "helpers"
   ],
-  "author": {
-    "name": "Dan Shervheim",
-    "email": "danielshervheim@gmail.com",
-    "url": "http://danielshervheim.com/"
-  },
+  "license": "BSD-3-Clause",
+  "name": "com.danielshervheim.core-utils",
+  "repository": "github:danielshervheim/unity-core",
+  "unity": "2018.3",
+  "version": "1.3.1",
   "hideInEditor": false
 }
