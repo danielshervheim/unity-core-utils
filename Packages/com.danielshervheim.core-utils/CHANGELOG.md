@@ -96,3 +96,7 @@
 ## 1.3.1
 
 - Added `SnapRect` class.
+
+## 1.3.2
+
+- Moved to NPM, added readme to package root.

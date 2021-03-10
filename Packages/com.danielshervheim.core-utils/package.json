@@ -16,6 +16,6 @@
   "name": "com.danielshervheim.core-utils",
   "repository": "github:danielshervheim/unity-core",
   "unity": "2018.3",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "hideInEditor": false
 }
