@@ -103,4 +103,8 @@
 
 ## 1.3.3
 
-- Changed required unity version from `2018.3` to `2019.1`
+- Changed required unity version from `2018.3` to `2019.1`.
+
+## 1.3.4
+
+- Fixed github link in `package.json`.
