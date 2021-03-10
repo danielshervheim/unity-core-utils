@@ -100,3 +100,7 @@
 ## 1.3.2
 
 - Moved to NPM, added readme to package root.
+
+## 1.3.3
+
+- Changed required unity version from `2018.3` to `2019.1`
