@@ -1,6 +1,6 @@
 # unity-core
 
-Please see the [readme](Packages/com.danielshervheim.core-utils/README.md) in the package directory for information on all of the included utilities.
+Please see the [readme](Packages/com.dss.core-utils/README.md) in the package directory for information on all of the included utilities.
 
 ## How To Install
 
@@ -14,14 +14,14 @@ To the `scopedRegistries` section:
 {
   "name": "DSS",
   "url": "https://registry.npmjs.com",
-  "scopes": [ "com.danielshervheim" ]
+  "scopes": [ "com.dss" ]
 }
 ```
 
 To the `dependencies` section:
 
 ```
-"com.danielshervheim.core-utils": "1.3.2"
+"com.dss.core-utils": "1.3.3"
 ```
 
 After changes, the manifest file should look like below:
@@ -32,10 +32,10 @@ After changes, the manifest file should look like below:
     {
       "name": "DSS",
       "url": "https://registry.npmjs.com",
-      "scopes": [ "com.danielshervheim" ]
+      "scopes": [ "com.dss" ]
     }
   ],
   "dependencies": {
-    "com.danielshervheim.core-utils": "1.3.2",
+    "com.dss.core-utils": "1.3.3",
     ...
 ```

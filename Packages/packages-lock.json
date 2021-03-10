@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "com.danielshervheim.core-utils": {
-      "version": "file:com.danielshervheim.core-utils",
+    "com.dss.core-utils": {
+      "version": "file:com.dss.core-utils",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
