@@ -10,7 +10,7 @@ file (`Packages/manifest.json`).
 
 To the `scopedRegistries` section:
 
-```json
+```
 {
   "name": "DSS",
   "url": "https://registry.npmjs.com",
@@ -20,13 +20,13 @@ To the `scopedRegistries` section:
 
 To the `dependencies` section:
 
-```json
+```
 "com.danielshervheim.core-utils": "1.3.2"
 ```
 
 After changes, the manifest file should look like below:
 
-```json
+```
 {
   "scopedRegistries": [
     {
