@@ -1,4 +1,4 @@
-# unity-core
+# unity-core-utils
 
 Please see the [readme](Packages/com.dss.core-utils/README.md) in the package directory for information on all of the included utilities.
 
