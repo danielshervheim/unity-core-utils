@@ -112,3 +112,7 @@
 ## 1.3.5
 
 - Added `PlatformConditional` class.
+
+## 1.3.6
+
+- Added `DisableIfNot` behaviour to the `PlatformConditional` class.

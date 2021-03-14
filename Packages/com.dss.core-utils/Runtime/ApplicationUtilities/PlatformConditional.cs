@@ -6,15 +6,30 @@ namespace DSS.CoreUtils.ApplicationUtilities
     // @brief Enables / disables the gameObject based on the current platform.
     public class PlatformConditional : MonoBehaviour
     {
-        // @brief This gameObject will be disabled if the game is run on any of these platforms.
-        [SerializeField] private List<RuntimePlatform> disableOnPlatforms;
+        public enum Behaviour { DisableIf, DisableIfNot };
+
+        // @brief The list of platforms to check against.
+        [SerializeField] private List<RuntimePlatform> platforms = default;
+
+        // @brief The behaviour if the list of platforms contains the current platform.
+        [SerializeField] private Behaviour behaviour = Behaviour.DisableIf;
 
         private void Awake()
         {
-            if (disableOnPlatforms.Contains(Application.platform))
+            if (behaviour == Behaviour.DisableIf)
             {
-                this.gameObject.SetActive(false);
+                if (platforms.Contains(Application.platform))
+                {
+                    this.gameObject.SetActive(false);
+                }
             }
+            else if (behaviour == Behaviour.DisableIfNot)
+            {
+                if (!platforms.Contains(Application.platform))
+                {
+                    this.gameObject.SetActive(false);
+                }
+            }  
         }
     }
 }

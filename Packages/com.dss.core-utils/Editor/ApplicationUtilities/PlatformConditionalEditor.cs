@@ -6,18 +6,21 @@ namespace DSS.CoreUtils.ApplicationUtilities
     [CustomEditor(typeof(PlatformConditional), true)]
     public class PlatformConditionalEditor : Editor
     {
-        SerializedProperty disableOnPlatforms;
+        SerializedProperty platforms;
+        SerializedProperty behaviour;
 
         private void OnEnable()
         {
-            disableOnPlatforms = serializedObject.FindProperty("disableOnPlatforms");
+            platforms = serializedObject.FindProperty("platforms");
+            behaviour = serializedObject.FindProperty("behaviour");
         }
 
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
-            EditorGUILayout.LabelField("Disable On", EditorStyles.boldLabel);
-            EditorGUILayout.PropertyField(disableOnPlatforms, new GUIContent("Platforms"));
+            // EditorGUILayout.LabelField("Behaviour", EditorStyles.boldLabel);
+            EditorGUILayout.PropertyField(behaviour);
+            EditorGUILayout.PropertyField(platforms, new GUIContent("Platforms"));
             serializedObject.ApplyModifiedProperties();
         }
     }

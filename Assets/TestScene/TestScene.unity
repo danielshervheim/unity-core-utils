@@ -2388,7 +2388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767a4c0e66f404905a4b09d299027b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disableOnPlatforms: 010000000000000002000000
+  platforms: 
+  behaviour: 0
 --- !u!1 &1880070481
 GameObject:
   m_ObjectHideFlags: 0
