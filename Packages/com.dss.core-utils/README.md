@@ -4,6 +4,45 @@ A collection of common Unity scripts and extensions I've found myself continuall
 
 TODO: write more details about how each of these works.
 
+
+## How To Install
+
+The core-utils package uses the [scoped registry](https://docs.unity3d.com/Manual/upm-scoped.html) feature to import
+dependent packages. Please add the following sections to the package manifest
+file (`Packages/manifest.json`).
+
+To the `scopedRegistries` section:
+
+```
+{
+  "name": "DSS",
+  "url": "https://registry.npmjs.com",
+  "scopes": [ "com.dss" ]
+}
+```
+
+To the `dependencies` section:
+
+```
+"com.dss.core-utils": "1.3.7"
+```
+
+After changes, the manifest file should look like below:
+
+```
+{
+  "scopedRegistries": [
+    {
+      "name": "DSS",
+      "url": "https://registry.npmjs.com",
+      "scopes": [ "com.dss" ]
+    }
+  ],
+  "dependencies": {
+    "com.dss.core-utils": "1.3.7",
+    ...
+```
+
 ## Application Utilities
 
 Exposes a setter for common `UnityEngine.Application` properties, so they can be set by the event system (Buttons, Toggles, etc).
@@ -12,6 +51,12 @@ Exposes a setter for common `UnityEngine.Application` properties, so they can be
 - `PlatformConditional`
 - `Quiter`
 - `SetTargetFrameRate`
+
+## Camera Utilities
+
+Various camera and rendering related utilities.
+
+- `DynamicCameraResolution`
 
 ## Events
 

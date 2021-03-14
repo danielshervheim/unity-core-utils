@@ -116,3 +116,7 @@
 ## 1.3.6
 
 - Added `DisableIfNot` behaviour to the `PlatformConditional` class.
+
+## 1.3.7
+
+- Added `DynamicCameraResolution` script.
