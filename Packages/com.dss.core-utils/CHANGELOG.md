@@ -108,3 +108,7 @@
 ## 1.3.4
 
 - Fixed github link in `package.json`.
+
+## 1.3.5
+
+- Added `PlatformConditional` class.

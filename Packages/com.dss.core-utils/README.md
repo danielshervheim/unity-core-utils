@@ -9,6 +9,7 @@ TODO: write more details about how each of these works.
 Exposes a setter for common `UnityEngine.Application` properties, so they can be set by the event system (Buttons, Toggles, etc).
 
 - `OpenURL`
+- `PlatformConditional`
 - `Quiter`
 - `SetTargetFrameRate`
 
