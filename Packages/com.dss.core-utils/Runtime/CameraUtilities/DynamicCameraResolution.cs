@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace DSS.CoreUtils.CameraUtilities
@@ -7,26 +8,19 @@ namespace DSS.CoreUtils.CameraUtilities
     [RequireComponent(typeof(Camera))]
     public class DynamicCameraResolution : MonoBehaviour
     {
+        // @brief The depth buffer resolution options.
         public enum DepthBufferResolution { NoDepthBuffer = 0, HalfPrecision = 16, FullPrecision = 32 };
 
+        // @brief The multiplier for the screen resolution.
         [SerializeField][Range(0f,1f)] private float resolutionScale = 1f;
+
+        // @brief The depth buffer resolution.
         [SerializeField] private DepthBufferResolution defaultDepthBufferResolution = DepthBufferResolution.HalfPrecision;
+
+        // @brief An optional RawImage object to send the generated textures to.
         [SerializeField] private RawImage renderTextureTarget = default;
 
         private Camera cam;
-
-        // @brief Getter for the dynamic texture.
-        public RenderTexture CameraTexture
-        {
-            get
-            {
-                if (cam == null || cam.targetTexture == null)
-                {
-                    Setup();
-                }
-                return cam.targetTexture;
-            }
-        }
         
         // @brief Sets the current render resolution scale and generates a new texture.
         public void SetResolutionScale(float newScale)
@@ -42,12 +36,6 @@ namespace DSS.CoreUtils.CameraUtilities
         }
 
         private void Awake()
-        {
-            Setup();
-        }
-
-        // Caches camera reference and generates the first texture.
-        private void Setup()
         {
             cam = GetComponent<Camera>();
             UpdateResolution();

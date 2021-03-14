@@ -120,3 +120,7 @@
 ## 1.3.7
 
 - Added `DynamicCameraResolution` script.
+
+## 1.3.8
+
+- Improved comments in the `DynamicCameraResolution` script.
