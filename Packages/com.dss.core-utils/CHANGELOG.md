@@ -124,3 +124,8 @@
 ## 1.3.8
 
 - Improved comments in the `DynamicCameraResolution` script.
+
+## 1.3.9
+
+- Added `Pivot` extensions to `RectTransformExtensions` class.
+- Added `GraphicExtensions` class.

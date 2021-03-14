@@ -149,6 +149,30 @@ namespace DSS.CoreUtils.Extensions
             return rt.anchorMax.y;
         }
 
+        // @brief Sets this RectTransforms pivot.x.
+        public static void SetPivotX(this RectTransform rt, float x)
+        {
+            rt.pivot = new Vector2(x, rt.pivot.y);
+        }
+
+        // @brief Returns this RectTransforms pivot.x.
+        public static float GetPivotX(this RectTransform rt)
+        {
+            return rt.pivot.x;
+        }
+
+        // @brief Sets this RectTransforms pivot.y.
+        public static void SetPivotY(this RectTransform rt, float y)
+        {
+            rt.pivot = new Vector2(rt.pivot.x, y);
+        }
+
+        // @brief Returns this RectTransforms pivot.y.
+        public static float GetPivotY(this RectTransform rt)
+        {
+            return rt.pivot.y;
+        }
+
         // @brief Expands the RectTransform to its parent.
         public static void Expand(this RectTransform rt, float padding = 0f)
         {
