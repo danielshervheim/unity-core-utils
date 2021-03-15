@@ -617,6 +617,7 @@ MonoBehaviour:
   unlockCursorOnLoad: 0
   fakeLoading: 1
   fakeLoadingDuration: 2
+  loading: 0
 --- !u!4 &349429756
 Transform:
   m_ObjectHideFlags: 0
@@ -1630,7 +1631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1009543775
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1640,16 +1641,16 @@ RectTransform:
   m_GameObject: {fileID: 1009543774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1814800620}
   m_Father: {fileID: 1132078738}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 104.03064, y: 317.36188}
+  m_SizeDelta: {x: -104.03064, y: -585.0728}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1009543776
 MonoBehaviour:
@@ -1660,7 +1661,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1009543774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c304d0d87631440b599de1a22ad7fbf6, type: 3}
+  m_Script: {fileID: 11500000, guid: bb7fc388f8a324d1c8ac699ae3277e6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1009543777
@@ -1968,9 +1969,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 700, y: 0}
-  m_Pivot: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.010772705}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1132078739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1985,16 +1986,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snapWidth: 1
   widthMode: 0
-  targetWidthRelative: 0.5
-  snapAtWidthAbsolute: 500
-  targetWidthAbsolute: 700
+  targetWidthRelative: 0.324
+  snapAtWidthAbsolute: 800
+  targetWidthAbsolute: 600
   snapAtWidthRelative: 0.5
   snapHeight: 0
-  heightMode: 0
-  targetHeightRelative: 0.5
+  heightMode: 1
+  targetHeightRelative: 0.494
   snapAtHeightAbsolute: 500
   targetHeightAbsolute: 100
-  snapAtHeightRelative: 0.5
+  snapAtHeightRelative: 0.191
 --- !u!114 &1132078740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2373,6 +2374,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1305211905}
   targetCanvas: {fileID: 1840535114}
+  width: 0
+  height: 0
+  safeArea:
+    x: 0
+    y: 0
+    width: 0
+    height: 0
 --- !u!114 &1305211907
 MonoBehaviour:
   m_ObjectHideFlags: 0
