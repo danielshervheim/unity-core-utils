@@ -173,16 +173,34 @@ namespace DSS.CoreUtils.Extensions
             return rt.pivot.y;
         }
 
-        // @brief Expands the RectTransform to its parent.
-        public static void Expand(this RectTransform rt, float padding = 0f)
+        // @brief Resets the RectTransforms properties.
+        public static void Reset(this RectTransform rt)
         {
-            rt.pivot = Vector2.zero;
+            rt.anchoredPosition = Vector2.zero;
+            rt.pivot = Vector2.one*0.5f;
+            rt.anchorMin = rt.pivot;
+            rt.anchorMax = rt.pivot;
+            rt.sizeDelta = Vector2.one*100f;
+
+            rt.localScale = Vector3.one;
+            rt.localRotation = Quaternion.identity;
+        }
+
+        // @brief Expands the RectTransform to it's parent, centered at 0.5
+        public static void Expand(this RectTransform rt)
+        {
+            rt.ExpandAtPivot(Vector2.one*0.5f);
+        }
+
+        // @brief Expands the RectTransform to it's parent, centered at the given pivot.
+        public static void ExpandAtPivot(this RectTransform rt, Vector2 pivot)
+        {
+            rt.pivot = pivot;
+
             rt.anchorMin = Vector2.zero;
             rt.anchorMax = Vector2.one;
-            rt.SetTop(padding);
-            rt.SetBottom(padding);
-            rt.SetLeft(padding);
-            rt.SetRight(padding);
+
+            rt.sizeDelta = Vector2.zero;
         }
     }
 

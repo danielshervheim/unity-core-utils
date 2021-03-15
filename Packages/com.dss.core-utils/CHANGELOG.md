@@ -141,3 +141,7 @@
 - Moved `CropToSafeArea` into `LayoutUtilities` namespace.
 - Updated `SnapRect` to use layout system hooks, to reduce computation per-frame.
 - Added `AddComponentAttribute` to classes.
+
+## 1.4.1
+
+- Fixed bug causing `CropToSafeArea` RectTransforms to shrink to 0 scale.

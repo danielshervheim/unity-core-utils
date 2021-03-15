@@ -52,11 +52,12 @@ namespace DSS.CoreUtils.LayoutUtilities
 
         private void StartLayout()
         {
-            // Expand the rect initially.
-            rectTransform.Expand();
-
             // Add the horizontal properties to the tracker.
             m_tracker.Add(this, rectTransform, DrivenTransformProperties.All);
+
+            // Expand the rect initially, around the minimum point (0,0).
+            rectTransform.Reset();
+            rectTransform.ExpandAtPivot(Vector2.zero);
 
             // Compute the safe area boundaries in local space.
             Vector2 min, max;
@@ -84,7 +85,7 @@ namespace DSS.CoreUtils.LayoutUtilities
 
         private void SetDirty()
         {
-            if (!gameObject.activeSelf)
+            if (!this.enabled)
             {
                 return;
             }
