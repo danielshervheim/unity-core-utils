@@ -5,6 +5,7 @@ namespace DSS.CoreUtils.ScreenUtilities
 {
     // @brief Resizes the attached RectTransform to match the Screen's safe area.
     // (For non-notched devices, this essentially does nothing).
+    [System.Obsolete("Replaced with CropToSafeArea, which does the same thing more robustly.", false)]
     [RequireComponent(typeof(RectTransform))]
     [ExecuteInEditMode]
     public class MatchSafeArea : MonoBehaviour

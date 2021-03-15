@@ -129,3 +129,8 @@
 
 - Added `Pivot` extensions to `RectTransformExtensions` class.
 - Added `GraphicExtensions` class.
+
+## 1.3.10
+
+- Marked `MatchSafeArea` class as obsolete.
+- Added `CropToSafeArea` class, which does the same thing as `MatchSafeArea` but more robustly.

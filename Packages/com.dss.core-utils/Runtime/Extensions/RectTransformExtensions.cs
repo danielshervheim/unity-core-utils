@@ -176,6 +176,9 @@ namespace DSS.CoreUtils.Extensions
         // @brief Expands the RectTransform to its parent.
         public static void Expand(this RectTransform rt, float padding = 0f)
         {
+            rt.pivot = Vector2.zero;
+            rt.anchorMin = Vector2.zero;
+            rt.anchorMax = Vector2.one;
             rt.SetTop(padding);
             rt.SetBottom(padding);
             rt.SetLeft(padding);
