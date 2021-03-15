@@ -5,6 +5,7 @@ namespace DSS.CoreUtils.LayoutUtilities
 {
     // @brief A layout group that mimics both a horizontal and a
     // vertical layout group, depending on the specified direction.
+    [AddComponentMenu("DSS/Layout Utilities/Bidirectional Layout Group")]	
     public class BidirectionalLayoutGroup : HorizontalOrVerticalLayoutGroup
     {
         public enum LayoutDirection { Horizontal, Vertical };

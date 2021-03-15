@@ -87,6 +87,7 @@ Adds customizable notes to gameObject inspectors in the scene.
 Helps with common layout paradigms.
 
 - `BidirectionalLayoutGroup`
+- `CropToSafeArea`
 - `ResponsiveBidirectionalLayoutGroup`
 - `ResponsiveGridLayout`
 - `SnapRect`
@@ -96,7 +97,6 @@ Helps with common layout paradigms.
 Exposes various events for the Screen class.
 
 - `AspectRatioConditional`
-- `MatchSafeArea`
 - `ScreenWatcher`
 
 ## Terrain Utilities

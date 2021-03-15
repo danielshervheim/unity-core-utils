@@ -5,6 +5,7 @@ namespace DSS.CoreUtils.ScreenUtilities
     // @brief Enables / disables the gameObject based on the screen's aspect ratio.
     // (This is useful for having certain UI elements only appear in portrait vs landscape
     // mode, for example).
+    [AddComponentMenu("DSS/Screen Utilities/Aspect Ratio Conditional")]	
     public class AspectRatioConditional : MonoBehaviour
     {
         private enum EnabledRequirement { Portrait, Landscape };

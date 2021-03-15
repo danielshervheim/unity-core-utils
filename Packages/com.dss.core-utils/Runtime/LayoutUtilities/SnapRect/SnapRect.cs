@@ -8,6 +8,7 @@ namespace DSS.CoreUtils.LayoutUtilities
     // if its width (or height) becomes more than a certain percent of its
     // parent width (or height).
     // Think of it as a CSS media-query type of thing.
+    [AddComponentMenu("DSS/Layout Utilities/Snap Rect")]	
     [ExecuteInEditMode]
     [RequireComponent(typeof(RectTransform))]
     public class SnapRect : MonoBehaviour

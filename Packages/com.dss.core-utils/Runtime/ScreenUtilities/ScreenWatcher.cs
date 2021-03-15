@@ -5,6 +5,7 @@ namespace DSS.CoreUtils.ScreenUtilities
 {
     // @brief Listens for changes in the screen properties.
     // (Useful for UI stuff).
+    [AddComponentMenu("DSS/Screen Utilities/Screen Watcher")]	
     public class ScreenWatcher : MonoBehaviour
     {
         public class SafeAreaChangeEvent : UnityEvent<Rect> { };

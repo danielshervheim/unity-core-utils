@@ -4,6 +4,7 @@ using UnityEngine.UI;
 namespace DSS.CoreUtils.LayoutUtilities
 {
     // @brief Lays out elements in a grid with specific column and row counts.
+    [AddComponentMenu("DSS/Layout Utilities/Responsive Grid Layout Group")]	
     public class ResponsiveGridLayoutGroup : GridLayoutGroup
     {
         public int rows = 4;

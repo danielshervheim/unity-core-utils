@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 
 namespace DSS.CoreUtils.Tweening
 {
+    [AddComponentMenu("DSS/Tweening/Scale on Click")]	
     public class ScaleOnClick : Tweener, IPointerDownHandler, IPointerUpHandler
     {
         // A = unclicked, B = clicked.

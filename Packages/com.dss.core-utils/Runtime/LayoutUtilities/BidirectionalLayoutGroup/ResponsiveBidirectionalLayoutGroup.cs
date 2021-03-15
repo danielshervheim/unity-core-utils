@@ -7,8 +7,9 @@ namespace DSS.CoreUtils.LayoutUtilities
 {
     // @brief Overrides a BidirectionalLayoutGroup's direction property
     // in response to the device's aspect ratio.
-    [RequireComponent(typeof(BidirectionalLayoutGroup))]
+    [AddComponentMenu("DSS/Layout Utilities/Responsive Bidirectional Layout Group")]	
     [ExecuteInEditMode]
+    [RequireComponent(typeof(BidirectionalLayoutGroup))]
     public class ResponsiveBidirectionalLayoutGroup : MonoBehaviour
     {   
         // @brief Which layout direction to follow in portrait mode.

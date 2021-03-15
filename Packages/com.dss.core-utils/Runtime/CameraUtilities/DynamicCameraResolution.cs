@@ -5,6 +5,7 @@ using UnityEngine.UI;
 namespace DSS.CoreUtils.CameraUtilities
 {
     // @brief Scales the camera render resolution.
+    [AddComponentMenu("DSS/Camera Utilities/Dynamic Camera Resolution")]	
     [RequireComponent(typeof(Camera))]
     public class DynamicCameraResolution : MonoBehaviour
     {

@@ -134,3 +134,10 @@
 
 - Marked `MatchSafeArea` class as obsolete.
 - Added `CropToSafeArea` class, which does the same thing as `MatchSafeArea` but more robustly.
+
+## 1.4.0
+
+- Removed `MatchSafeArea` class.
+- Moved `CropToSafeArea` into `LayoutUtilities` namespace.
+- Updated `SnapRect` to use layout system hooks, to reduce computation per-frame.
+- Added `AddComponentAttribute` to classes.

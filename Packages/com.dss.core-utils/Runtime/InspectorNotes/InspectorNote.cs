@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace DSS.CoreUtils.InspectorNotes
 {
+    [AddComponentMenu("DSS/Inspector Notes/Inspector Note")]	
     public class InspectorNote : MonoBehaviour
     {
         public enum NoteType { None, Info, Warning, Error };

@@ -4,6 +4,7 @@ using UnityEngine;
 namespace DSS.CoreUtils.ApplicationUtilities
 {
     // @brief Enables / disables the gameObject based on the current platform.
+    [AddComponentMenu("DSS/Application Utilities/Platform Conditional")]	
     public class PlatformConditional : MonoBehaviour
     {
         public enum Behaviour { DisableIf, DisableIfNot };
