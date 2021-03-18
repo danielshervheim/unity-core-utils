@@ -30,6 +30,13 @@ namespace DSS.CoreUtils.Tweening
             return true;
         }
 
+        protected override OnDisabledBehaviour BehaviourOnDisable()
+        {
+            // If this gameObject is disabled, just reset the
+            // button to the unclicked state.
+            return OnDisabledBehaviour.ToA;
+        }
+
         public void OnPointerDown(PointerEventData data)
         {
             ToB();

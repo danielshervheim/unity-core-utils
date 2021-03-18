@@ -145,3 +145,8 @@
 ## 1.4.1
 
 - Fixed bug causing `CropToSafeArea` RectTransforms to shrink to 0 scale.
+
+## 1.4.2
+
+- Fixed undefined `Tweener` behaviour when the gameObject they are attached to are disabled.
+    - Added overrideable `OnDisabledBehaviour BehaviourOnDisable()` method.

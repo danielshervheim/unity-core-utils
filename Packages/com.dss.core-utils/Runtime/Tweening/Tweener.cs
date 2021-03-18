@@ -10,14 +10,16 @@ namespace DSS.CoreUtils.Tweening
     {
         public enum State { A, B };
 
+        public enum OnDisabledBehaviour { ToA, ToB, ToTarget };
+
         // @brief How long it takes to tween between states.
-        [SerializeField] float duration = 0.25f;
+        [SerializeField] private float duration = 0.25f;
 
         // @brief The easing curve to use while tweening towards A.
-        [SerializeField] AnimationCurve aCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
+        [SerializeField] private AnimationCurve aCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
         
         // @brief The easing curve to use while tweening towards B.
-        [SerializeField] AnimationCurve bCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
+        [SerializeField] private AnimationCurve bCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
 
         // @brief Called when we start tweening towards A.
         protected UnityEvent onTowardsA = new UnityEvent();
@@ -31,11 +33,20 @@ namespace DSS.CoreUtils.Tweening
         // @brief Called when we reach B.
         protected UnityEvent onReachedB = new UnityEvent();
 
-        State state = State.A;  // Current state
-        float t = 0f;  // Lerp parameter
-        bool transition = false;  // Wether we are mid-transition or not
-        Coroutine routine;  // The transition coroutine
-        AnimationCurve curve;  // The curve to use
+        // Private vars.
+        private State state = State.A;  // Current state
+        private float t = 0f;  // Lerp parameter
+        private bool transition = false;  // Wether we are mid-transition or not
+        private Coroutine routine;  // The transition coroutine
+        private AnimationCurve curve;  // The curve to use
+
+        // @brief Returns the underlying coroutine object.
+        // (This should only be used if you know what you're doing).
+        // TODO: make this protected?
+        public Coroutine GetUnderlyingCoroutine()
+        {
+            return routine;
+        }
 
         // @brief Start tweening towards A.
         protected void ToA()
@@ -92,7 +103,12 @@ namespace DSS.CoreUtils.Tweening
         // @brief Lerps the the object between A (t = 0), and B (t = 1).
         protected abstract void Lerp(float t);
 
-        // Setup the 
+        // @brief What to do if the gameObject is disabled mid-tween. 
+        protected virtual OnDisabledBehaviour BehaviourOnDisable()
+        {
+            return OnDisabledBehaviour.ToTarget;
+        }
+
         protected void Awake()
         {
             state = GetInitialState();
@@ -114,7 +130,28 @@ namespace DSS.CoreUtils.Tweening
             }
         }
 
-        IEnumerator ToARoutine()
+        protected void OnDisable()
+        {
+            if (!transition)
+            {
+                return;
+            }
+
+            if (BehaviourOnDisable() == OnDisabledBehaviour.ToA)
+            {
+                SetImmediateState(State.A);
+            }
+            else if (BehaviourOnDisable() == OnDisabledBehaviour.ToB)
+            {
+                SetImmediateState(State.B);
+            }
+            else if (BehaviourOnDisable() == OnDisabledBehaviour.ToTarget)
+            {
+                SetImmediateState(state);
+            }
+        }
+
+        private IEnumerator ToARoutine()
         {
             transition = true;
             onTowardsA.Invoke();
@@ -132,7 +169,7 @@ namespace DSS.CoreUtils.Tweening
             transition = false;
         }
 
-        IEnumerator ToBRoutine()
+        private IEnumerator ToBRoutine()
         {
             transition = true;
             onTowardsB.Invoke();
@@ -150,9 +187,38 @@ namespace DSS.CoreUtils.Tweening
             transition = false;
         }
 
-        public Coroutine GetUnderlyingCoroutine()
+        // Cancels the current tween (if mid-tween).
+        private void CancelTween()
         {
-            return routine;
+            if (!transition)
+            {
+                return;
+            }
+
+            StopCoroutine(routine);
+            transition = false;
+        }
+
+        // Cancel any current tween and immediately jump to a given state.
+        private void SetImmediateState(State newState)
+        {
+            // Cancel current tween (if any)
+            CancelTween();
+
+            // Save the new state.
+            state = newState;
+
+            // And lerp towards it, as well as invoking the appropriate event.
+            if (state == State.A)
+            {
+                Lerp(0f);
+                onReachedA.Invoke();
+            }
+            else if (state == State.B)
+            {
+                Lerp(1f);
+                onReachedB.Invoke();
+            }
         }
     }
 }
