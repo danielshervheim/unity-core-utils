@@ -7,13 +7,15 @@ namespace DSS.CoreUtils.LayoutUtilities
 {
     // @brief Expands the RectTransform to fill out as much of its parent as possible,
     // without expanding past the safe area.
-    [AddComponentMenu("DSS/Layout Utilities/Crop To Safe Area")]	
+    [AddComponentMenu("DSS/Layout Utilities/Crop To Safe Area")]
     [ExecuteInEditMode]
     [RequireComponent(typeof(RectTransform))]
     public class CropToSafeArea : MonoBehaviour, ILayoutSelfController
     {
         [System.NonSerialized] private RectTransform m_rect;
         private DrivenRectTransformTracker m_tracker;
+
+        private Rect cachedSafeArea;
 
         // private property to get the RectTransform.
         private RectTransform rectTransform
@@ -30,7 +32,17 @@ namespace DSS.CoreUtils.LayoutUtilities
 
         private void OnEnable()
         {
+            cachedSafeArea = Screen.safeArea;
             SetDirty();
+        }
+
+        private void Update()
+        {
+            if (cachedSafeArea != Screen.safeArea)
+            {
+                cachedSafeArea = Screen.safeArea;
+                SetDirty();
+            }
         }
 
         private void OnDisable()
@@ -78,7 +90,7 @@ namespace DSS.CoreUtils.LayoutUtilities
             RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, Screen.safeArea.max, null, out max);
             max = rectTransform.rect.max-max;
 
-            // Set the vertical offsets.       
+            // Set the vertical offsets.
             rectTransform.SetBottom(Mathf.Max(0f, min.y));
             rectTransform.SetTop(Mathf.Max(0f, max.y));
         }
@@ -91,7 +103,7 @@ namespace DSS.CoreUtils.LayoutUtilities
             }
             LayoutRebuilder.MarkLayoutForRebuild(rectTransform);
         }
-	
+
         #if UNITY_EDITOR
         private void OnValidate()
         {

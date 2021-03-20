@@ -150,3 +150,7 @@
 
 - Fixed undefined `Tweener` behaviour when the gameObject they are attached to are disabled.
     - Added overrideable `OnDisabledBehaviour BehaviourOnDisable()` method.
+
+## 1.4.3
+
+- Fixed bug where `CropToSafeArea` was not listening properly for changes in the `Screen.safeArea` rect, and hence missing re-layout. 
