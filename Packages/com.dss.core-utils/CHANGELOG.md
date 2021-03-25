@@ -154,3 +154,7 @@
 ## 1.4.3
 
 - Fixed bug where `CropToSafeArea` was not listening properly for changes in the `Screen.safeArea` rect, and hence missing re-layout. 
+
+## 1.5.0
+
+- Added `ReadOnly` and `ReadOnlyRuntime` attributes.

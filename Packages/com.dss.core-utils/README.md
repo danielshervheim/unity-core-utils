@@ -52,6 +52,13 @@ Exposes a setter for common `UnityEngine.Application` properties, so they can be
 - `Quiter`
 - `SetTargetFrameRate`
 
+## Attributes
+
+Various attributes to make expressive editors easier.
+
+- `ReadOnly`
+- `ReadOnlyRuntime`
+
 ## Camera Utilities
 
 Various camera and rendering related utilities.
