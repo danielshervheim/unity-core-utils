@@ -158,3 +158,7 @@
 ## 1.5.0
 
 - Added `ReadOnly` and `ReadOnlyRuntime` attributes.
+
+## 1.5.1
+
+- Added `SerializedPropertyContainer` editor utility, and modified `DynamicCameraResolutionEditor` to use it.

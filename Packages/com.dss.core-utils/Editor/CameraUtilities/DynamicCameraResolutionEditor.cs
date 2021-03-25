@@ -1,3 +1,4 @@
+using DSS.CoreUtils.EditorUtilities;
 using UnityEditor;
 using UnityEngine;
 
@@ -6,15 +7,16 @@ namespace DSS.CoreUtils.CameraUtilities
     [CustomEditor(typeof(DynamicCameraResolution), true)]
     public class DynamicCameraResolutionEditor : Editor
     {
-        SerializedProperty resolutionScale;
-        SerializedProperty defaultDepthBufferResolution;
-        SerializedProperty renderTextureTarget;
+        SerializedPropertyContainer props;
 
         private void OnEnable()
         {
-            resolutionScale = serializedObject.FindProperty("resolutionScale");
-            defaultDepthBufferResolution = serializedObject.FindProperty("defaultDepthBufferResolution");
-            renderTextureTarget = serializedObject.FindProperty("renderTextureTarget");
+            props = new SerializedPropertyContainer(serializedObject, new string[]
+            {
+                "resolutionScale",
+                "defaultDepthBufferResolution",
+                "renderTextureTarget"
+            });
         }
 
         public override void OnInspectorGUI()
@@ -26,7 +28,7 @@ namespace DSS.CoreUtils.CameraUtilities
             
             EditorGUI.BeginChangeCheck();
             {
-                EditorGUILayout.PropertyField(resolutionScale, new GUIContent("Scale"));
+                EditorGUILayout.PropertyField(props["resolutionScale"], new GUIContent("Scale"));
             }
             if (EditorGUI.EndChangeCheck() && Application.isPlaying)
             {
@@ -40,11 +42,11 @@ namespace DSS.CoreUtils.CameraUtilities
                 EditorGUILayout.Vector2Field("Resolution", new Vector2(width, height));
             }
             EditorGUI.EndDisabledGroup();
-            EditorGUILayout.PropertyField(defaultDepthBufferResolution, new GUIContent("Depth Buffer"));
+            EditorGUILayout.PropertyField(props["defaultDepthBufferResolution"], new GUIContent("Depth Buffer"));
 
             EditorGUILayout.Space();
             EditorGUILayout.LabelField("Render Target", EditorStyles.boldLabel);
-            EditorGUILayout.PropertyField(renderTextureTarget, new GUIContent("Target"));
+            EditorGUILayout.PropertyField(props["renderTextureTarget"], new GUIContent("Target"));
 
             serializedObject.ApplyModifiedProperties();
         }

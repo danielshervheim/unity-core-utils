@@ -24,7 +24,7 @@ To the `scopedRegistries` section:
 To the `dependencies` section:
 
 ```
-"com.dss.core-utils": "1.4.3"
+"com.dss.core-utils": "1.5.1"
 ```
 
 After changes, the manifest file should look like below:
@@ -39,7 +39,7 @@ After changes, the manifest file should look like below:
     }
   ],
   "dependencies": {
-    "com.dss.core-utils": "1.4.3",
+    "com.dss.core-utils": "1.5.1",
     ...
 ```
 
@@ -64,6 +64,12 @@ Various attributes to make expressive editors easier.
 Various camera and rendering related utilities.
 
 - `DynamicCameraResolution`
+
+## EditorUtilities
+
+Various editor utilities for helping write custom editors, etc.
+
+- `SerializedPropertyContainer`
 
 ## Events
 
