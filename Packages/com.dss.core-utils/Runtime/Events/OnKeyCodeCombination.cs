@@ -7,19 +7,17 @@ namespace DSS.CoreUtils.Events
     [AddComponentMenu("DSS/Events/On KeyCode Combination")]	
     public class OnKeyCodeCombination : MonoBehaviour
     {
-        [SerializeField] UnityEvent onKeyCodeCombination = default;
+        [SerializeField] private KeyCode[] combination;
+        [SerializeField] private float maxDelay = 1f;
+        [SerializeField][HideInInspector] private int listeningFor = 0;
 
-        [SerializeField] KeyCode[] combination;
+        public UnityEvent onKeyCodeCombination = default;
 
-        [SerializeField] float maxDelay = 1f;
-
-        [SerializeField][HideInInspector] int listeningFor = 0;
-
-        float timer = 0f;
+        private float timer = 0f;
 
         void Update()
         {
-            if (combination.Length < 2)
+            if (combination.Length == 0)
             {
                 return;
             }

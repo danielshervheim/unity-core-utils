@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,15 +9,17 @@ namespace DSS.CoreUtils.ScreenUtilities
     [AddComponentMenu("DSS/Screen Utilities/Screen Watcher")]	
     public class ScreenWatcher : MonoBehaviour
     {
-        public class SafeAreaChangeEvent : UnityEvent<Rect> { };
-        public class AspectRatioChangeEvent : UnityEvent<float> { };
-        public class ScreenSizeChangeEvent : UnityEvent<Vector2> { };
+        [Serializable] public class SafeAreaChangeEvent : UnityEvent<Rect> { };
+        [Serializable] public class AspectRatioChangeEvent : UnityEvent<float> { };
+        [Serializable] public class ScreenSizeChangeEvent : UnityEvent<Vector2> { };
 
         // @brief Invoked when the safe area changes.
         public SafeAreaChangeEvent onSafeAreaChange = new SafeAreaChangeEvent();
 
         // @brief Invoked when the aspect ratio changes.
         public AspectRatioChangeEvent onAspectRatioChange = new AspectRatioChangeEvent();
+        public AspectRatioChangeEvent onPortrait = new AspectRatioChangeEvent();
+        public AspectRatioChangeEvent onLandscape = new AspectRatioChangeEvent();
 
         // @brief Invoked when the screen size changes.
         public ScreenSizeChangeEvent onScreenSizeChange = new ScreenSizeChangeEvent();
@@ -77,6 +80,14 @@ namespace DSS.CoreUtils.ScreenUtilities
             {
                 cachedAspectRatio = cachedWidth/cachedHeight;
                 onAspectRatioChange.Invoke(cachedAspectRatio);
+                if (cachedAspectRatio < 1f)
+                {
+                    onPortrait.Invoke(cachedAspectRatio);
+                }
+                else
+                {
+                    onLandscape.Invoke(cachedAspectRatio);
+                }
             }
 
             if (cachedSafeArea != Screen.safeArea)

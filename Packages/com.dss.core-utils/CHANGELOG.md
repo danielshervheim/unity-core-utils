@@ -162,3 +162,15 @@
 ## 1.5.1
 
 - Added `SerializedPropertyContainer` editor utility, and modified `DynamicCameraResolutionEditor` to use it.
+
+## 1.6.0
+
+- Removed buggy terrain utilities.
+- Removed buggy `DynamicCameraResolution` utility.
+- Removed `ReadOnly` and `ReadOnlyRuntime` attributes in favor of custom inspectors.
+- Removed `AspectRatioConditional` and replaced with equivalent functionality in `ScreenWatcher`.
+- Renamed `SnapRect` to `RectTransformSnapper`.
+- Added `GUIUtilities` class for easier custom inspector creation.
+- Added `XmlNodeExtensions` class.
+- Added more extension methods to `StringExtensions` and `TransformExtensions`.
+- Added custom inspectors for all MonoBehaviours.

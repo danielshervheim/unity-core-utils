@@ -1,49 +1,66 @@
 using UnityEngine;
 using UnityEditor;
 
+using static DSS.CoreUtils.EditorUtilities.GUIUtilities;
+
 namespace DSS.CoreUtils.Tweening
 {
-    [CustomEditor(typeof(ScaleOnClick), true)]
-    public class ScaleOnClickEditor : Editor
+
+[CustomEditor(typeof(ScaleOnClick), true)]
+public class ScaleOnClickEditor : Editor
+{
+    SerializedProperty m_target;
+
+    SerializedProperty m_unclickedScale;
+    SerializedProperty m_clickedScale;
+
+    SerializedProperty m_duration;
+    SerializedProperty m_aCurve;
+    SerializedProperty m_bCurve;
+
+    
+    protected virtual void OnEnable()
+    { 
+        m_target = serializedObject.FindProperty("target");
+        m_unclickedScale = serializedObject.FindProperty("unclickedScale");
+        m_clickedScale = serializedObject.FindProperty("clickedScale");
+
+        m_duration = serializedObject.FindProperty("duration");    
+
+        m_aCurve = serializedObject.FindProperty("aCurve");    
+        m_bCurve = serializedObject.FindProperty("bCurve");  
+    }
+
+    public override void OnInspectorGUI()
     {
-        SerializedProperty m_duration;
-        SerializedProperty m_aCurve;
-        SerializedProperty m_bCurve;
+        serializedObject.Update();
 
-       SerializedProperty m_target;
-       SerializedProperty m_unclickedScale;
-       SerializedProperty m_clickedScale;
-        
-        protected virtual void OnEnable()
+        Section(string.Empty, () =>
         {
-            m_duration = serializedObject.FindProperty("duration");    
-            m_aCurve = serializedObject.FindProperty("aCurve");    
-            m_bCurve = serializedObject.FindProperty("bCurve");   
+            Title("Scale on Click");
+        });
 
-            m_target = serializedObject.FindProperty("target");
-            m_unclickedScale = serializedObject.FindProperty("unclickedScale");
-            m_clickedScale = serializedObject.FindProperty("clickedScale"); 
-        }
-
-        public override void OnInspectorGUI()
+        Section("Required References", () =>
         {
-            serializedObject.Update();
+            EditorGUILayout.PropertyField(m_target, new GUIContent("Target"), true);
+        });
 
-            EditorGUILayout.LabelField("Target", EditorStyles.boldLabel);
-            EditorGUILayout.PropertyField(m_target, new GUIContent("RectTransform"), true);
-            EditorGUILayout.Space();
+        Section("Scale Options", () =>
+        {
 
-            EditorGUILayout.LabelField("Appearance", EditorStyles.boldLabel);
             EditorGUILayout.PropertyField(m_unclickedScale, true);
             EditorGUILayout.PropertyField(m_clickedScale, true);
-            EditorGUILayout.Space();
+        });
 
-            EditorGUILayout.LabelField("Transition", EditorStyles.boldLabel);
-            EditorGUILayout.PropertyField(m_duration, true);
-            EditorGUILayout.PropertyField(m_aCurve, new GUIContent("Click"), true);
-            EditorGUILayout.PropertyField(m_bCurve, new GUIContent("Unclick"), true);
-            
-            serializedObject.ApplyModifiedProperties();
-        }
+        Section("Transition Options", () =>
+        {
+            EditorGUILayout.PropertyField(m_duration, new GUIContent("Transition Duration"), true);
+            EditorGUILayout.PropertyField(m_aCurve, new GUIContent("On Click Curve"), true);
+            EditorGUILayout.PropertyField(m_bCurve, new GUIContent("On Unclick Curve"), true);
+        }, spaceAfter: true);
+        
+        serializedObject.ApplyModifiedProperties();
     }
 }
+
+}  // namespace DSS.CoreUtils.Tweening

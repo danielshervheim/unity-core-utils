@@ -24,7 +24,7 @@ To the `scopedRegistries` section:
 To the `dependencies` section:
 
 ```
-"com.dss.core-utils": "1.5.1"
+"com.dss.core-utils": "1.6.0"
 ```
 
 After changes, the manifest file should look like below:
@@ -39,7 +39,7 @@ After changes, the manifest file should look like below:
     }
   ],
   "dependencies": {
-    "com.dss.core-utils": "1.5.1",
+    "com.dss.core-utils": "1.6.0",
     ...
 ```
 
@@ -52,24 +52,12 @@ Exposes a setter for common `UnityEngine.Application` properties, so they can be
 - `Quiter`
 - `SetTargetFrameRate`
 
-## Attributes
-
-Various attributes to make expressive editors easier.
-
-- `ReadOnly`
-- `ReadOnlyRuntime`
-
-## Camera Utilities
-
-Various camera and rendering related utilities.
-
-- `DynamicCameraResolution`
-
 ## EditorUtilities
 
 Various editor utilities for helping write custom editors, etc.
 
 - `SerializedPropertyContainer`
+- `GUIUtilities`
 
 ## Events
 
@@ -85,7 +73,6 @@ Extends several built in and Unity-specific classes.
 - `ListExtensions`
 - `RectTransformExtensions`
 - `StringExtensions`
-- `TerrainExtensions`
 - `TextAssetExtensions`
 - `TransformExtensions`
 
@@ -103,7 +90,7 @@ Helps with common layout paradigms.
 - `CropToSafeArea`
 - `ResponsiveBidirectionalLayoutGroup`
 - `ResponsiveGridLayout`
-- `SnapRect`
+- `RectTransformSnapper`
 
 ## Screen Utilities
 
@@ -111,13 +98,6 @@ Exposes various events for the Screen class.
 
 - `AspectRatioConditional`
 - `ScreenWatcher`
-
-## Terrain Utilities
-
-Utilities for converting `Terrain` components, and modifying their heights.
-
-- `Mesh To Terrain`
-- `Heighten and Deepen`
 
 ## Tweening
 
