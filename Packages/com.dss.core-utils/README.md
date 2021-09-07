@@ -24,7 +24,7 @@ To the `scopedRegistries` section:
 To the `dependencies` section:
 
 ```
-"com.dss.core-utils": "1.6.1"
+"com.dss.core-utils": "1.6.2"
 ```
 
 After changes, the manifest file should look like below:
@@ -39,7 +39,7 @@ After changes, the manifest file should look like below:
     }
   ],
   "dependencies": {
-    "com.dss.core-utils": "1.6.1",
+    "com.dss.core-utils": "1.6.2",
     ...
 ```
 

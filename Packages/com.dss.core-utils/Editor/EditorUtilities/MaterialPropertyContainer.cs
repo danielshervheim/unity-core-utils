@@ -5,11 +5,11 @@ using UnityEngine.Events;
 namespace DSS.CoreUtils.EditorUtilities
 {
 
-public class PropertyFinder
+public class MaterialPropertyContainer
 {
     private MaterialProperty[] properties;
 
-    public PropertyFinder(MaterialProperty[] properties)
+    public MaterialPropertyContainer(MaterialProperty[] properties)
     {
         this.properties = properties;
     }

@@ -179,3 +179,7 @@
 
 - Added `MaterialPropertyContainer` class.
 - Added `GUIUtilities.Popup` helper method.
+
+## 1.6.2
+
+- Fixed misnamed `MaterialPropertyContainer` class.
