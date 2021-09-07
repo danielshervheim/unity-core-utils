@@ -24,7 +24,7 @@ To the `scopedRegistries` section:
 To the `dependencies` section:
 
 ```
-"com.dss.core-utils": "1.6.0"
+"com.dss.core-utils": "1.6.1"
 ```
 
 After changes, the manifest file should look like below:
@@ -39,7 +39,7 @@ After changes, the manifest file should look like below:
     }
   ],
   "dependencies": {
-    "com.dss.core-utils": "1.6.0",
+    "com.dss.core-utils": "1.6.1",
     ...
 ```
 
@@ -56,8 +56,9 @@ Exposes a setter for common `UnityEngine.Application` properties, so they can be
 
 Various editor utilities for helping write custom editors, etc.
 
-- `SerializedPropertyContainer`
 - `GUIUtilities`
+- `MaterialPropertyContainer`
+- `SerializedPropertyContainer`
 
 ## Events
 
@@ -88,15 +89,14 @@ Helps with common layout paradigms.
 
 - `BidirectionalLayoutGroup`
 - `CropToSafeArea`
+- `RectTransformSnapper`
 - `ResponsiveBidirectionalLayoutGroup`
 - `ResponsiveGridLayout`
-- `RectTransformSnapper`
 
 ## Screen Utilities
 
 Exposes various events for the Screen class.
 
-- `AspectRatioConditional`
 - `ScreenWatcher`
 
 ## Tweening

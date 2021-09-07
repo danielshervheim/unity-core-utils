@@ -174,3 +174,8 @@
 - Added `XmlNodeExtensions` class.
 - Added more extension methods to `StringExtensions` and `TransformExtensions`.
 - Added custom inspectors for all MonoBehaviours.
+
+## 1.6.1
+
+- Added `MaterialPropertyContainer` class.
+- Added `GUIUtilities.Popup` helper method.

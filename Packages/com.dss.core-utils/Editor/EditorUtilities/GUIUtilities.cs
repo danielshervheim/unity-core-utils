@@ -69,6 +69,11 @@ public static class GUIUtilities
         style.wordWrap = true;
         EditorGUILayout.LabelField(subtitle, style);
     }
+
+    public static int Popup(int index, string label, string[] options)
+    {
+        return EditorGUILayout.Popup(label, index, options);
+    }
 }
 
 }  // DSS.CoreUtils.EditorUtilities
