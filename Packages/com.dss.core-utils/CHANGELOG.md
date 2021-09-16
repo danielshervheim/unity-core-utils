@@ -183,3 +183,7 @@
 ## 1.6.2
 
 - Fixed misnamed `MaterialPropertyContainer` class.
+
+## 1.6.3
+
+- Added `StaticScreenWatcher` class.

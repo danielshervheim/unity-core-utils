@@ -24,7 +24,7 @@ To the `scopedRegistries` section:
 To the `dependencies` section:
 
 ```
-"com.dss.core-utils": "1.6.2"
+"com.dss.core-utils": "1.6.3"
 ```
 
 After changes, the manifest file should look like below:
@@ -39,7 +39,7 @@ After changes, the manifest file should look like below:
     }
   ],
   "dependencies": {
-    "com.dss.core-utils": "1.6.2",
+    "com.dss.core-utils": "1.6.3",
     ...
 ```
 
@@ -71,11 +71,13 @@ Exposes common events to the event system.
 
 Extends several built in and Unity-specific classes.
 
+- `GraphicExtensions`
 - `ListExtensions`
 - `RectTransformExtensions`
 - `StringExtensions`
 - `TextAssetExtensions`
 - `TransformExtensions`
+- `XmlNodeExtensions`
 
 ## Inspector Notes
 
@@ -98,6 +100,7 @@ Helps with common layout paradigms.
 Exposes various events for the Screen class.
 
 - `ScreenWatcher`
+- `StaticScreenWatcher`
 
 ## Tweening
 
