@@ -187,3 +187,7 @@
 ## 1.6.3
 
 - Added `StaticScreenWatcher` class.
+
+## 1.6.4
+
+- Used `StaticScreenWatcher` in `CropToSafeArea` class.

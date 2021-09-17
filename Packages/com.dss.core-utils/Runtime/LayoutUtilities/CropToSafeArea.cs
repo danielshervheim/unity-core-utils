@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 using static DSS.CoreUtils.Extensions.RectTransformExtensions;
+using DSS.CoreUtils.ScreenUtilities;
 
 namespace DSS.CoreUtils.LayoutUtilities
 {
@@ -15,7 +16,18 @@ namespace DSS.CoreUtils.LayoutUtilities
         [System.NonSerialized] private RectTransform m_rect;
         private DrivenRectTransformTracker m_tracker;
 
-        private Rect cachedSafeArea;
+        private StaticScreenWatcher _screenWatcher = null;
+        private StaticScreenWatcher screenWatcher
+        {
+            get
+            {
+                if (_screenWatcher == null)
+                {
+                    _screenWatcher = new StaticScreenWatcher();
+                }
+                return _screenWatcher;
+            }
+        }
 
         // private property to get the RectTransform.
         private RectTransform rectTransform
@@ -32,15 +44,13 @@ namespace DSS.CoreUtils.LayoutUtilities
 
         private void OnEnable()
         {
-            cachedSafeArea = Screen.safeArea;
             SetDirty();
         }
 
         private void Update()
         {
-            if (cachedSafeArea != Screen.safeArea)
+            if (screenWatcher.CheckForChange())
             {
-                cachedSafeArea = Screen.safeArea;
                 SetDirty();
             }
         }
