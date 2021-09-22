@@ -191,3 +191,7 @@
 ## 1.6.4
 
 - Used `StaticScreenWatcher` in `CropToSafeArea` class.
+
+## 1.6.5
+
+- Added `Singleton` class.
