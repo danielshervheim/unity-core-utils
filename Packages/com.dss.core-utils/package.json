@@ -15,7 +15,7 @@
   "license": "BSD-3-Clause",
   "name": "com.dss.core-utils",
   "repository": "github:danielshervheim/unity-core-utils",
-  "unity": "2019.1",
-  "version": "1.6.5",
+  "unity": "2020.3",
+  "version": "1.6.6",
   "hideInEditor": false
 }

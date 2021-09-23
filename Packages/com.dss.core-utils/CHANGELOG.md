@@ -195,3 +195,8 @@
 ## 1.6.5
 
 - Added `Singleton` class.
+
+## 1.6.6
+
+- Upgraded to 2020.3
+- More robust singleton instance searching
