@@ -200,3 +200,7 @@
 
 - Upgraded to 2020.3
 - More robust singleton instance searching
+
+## 1.6.7
+
+- Fixed reference caching in the singleton classes.

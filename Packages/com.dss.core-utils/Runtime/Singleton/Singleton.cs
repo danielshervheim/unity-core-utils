@@ -11,7 +11,15 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         get
         {
-            m_instance = Object.FindObjectOfType<T>(true);
+            if (m_instance == null)
+            {
+                m_instance = Object.FindObjectOfType<T>(true);
+
+                if (m_instance == null)
+                {
+                    throw new MissingReferenceException("You need to have at least one instance of " + typeof(T).ToString() + " in the scene");
+                }
+            }
             return m_instance;
         }
     }

@@ -11,12 +11,15 @@ public class AutomaticSingleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         get
         {
-            m_instance = Object.FindObjectOfType<T>(true);
-
             if (m_instance == null)
             {
-                GameObject go = new GameObject(typeof(T).ToString() + " (Singleton)");
-                m_instance = go.AddComponent<T>();
+                m_instance = Object.FindObjectOfType<T>(true);
+
+                if (m_instance == null)
+                {
+                    GameObject go = new GameObject(typeof(T).ToString() + " (Singleton)");
+                    m_instance = go.AddComponent<T>();
+                }
             }
 
             return m_instance;
