@@ -204,3 +204,7 @@
 ## 1.6.7
 
 - Fixed reference caching in the singleton classes.
+
+## 1.6.8
+
+- Added `TerrainExtensions` class for converting `Terrain` objects to `Texture2D` objects (which can be exported via `ImageConversion.EncodeAsEXR`).
