@@ -16,6 +16,6 @@
   "name": "com.dss.core-utils",
   "repository": "github:danielshervheim/unity-core-utils",
   "unity": "2020.3",
-  "version": "1.6.8",
+  "version": "1.6.9",
   "hideInEditor": false
 }

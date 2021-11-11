@@ -3,48 +3,59 @@ using UnityEngine.EventSystems;
 
 namespace DSS.CoreUtils.Tweening
 {
-    [AddComponentMenu("DSS/Tweening/Scale on Click")]	
-    public class ScaleOnClick : Tweener, IPointerDownHandler, IPointerUpHandler
+
+[AddComponentMenu("DSS/Tweening/Scale on Click")]	
+// --------------------------------------------- //
+// @brief Scales a transform when it is clicked. //
+// --------------------------------------------- //
+public class ScaleOnClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+{
+    // --------- //
+    // VARIABLES //
+    // --------- //
+
+    [SerializeField] Transform target = default;
+    [SerializeField] float unclickedScale = 1f;
+    [SerializeField] float clickedScale = 0.9f;
+
+    [SerializeField] private float duration = 0.25f;
+    [SerializeField] private AnimationCurve curve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
+
+    private TweenedFloat tween;
+
+    // ------- //
+    // METHODS //
+    // ------- //
+
+    public void OnPointerDown(PointerEventData data)
     {
-        // A = unclicked, B = clicked.
+        tween.TowardsMax();
+    }
 
-        [SerializeField] Transform target = default;
-        [SerializeField] float unclickedScale = 1f;
-        [SerializeField] float clickedScale = 0.9f;
+    public void OnPointerUp(PointerEventData data)
+    {
+        tween.TowardsMin();
+    }
 
-        protected override void Lerp(float t)
-        {
-            target.localScale = Vector3.one * Mathf.Lerp(unclickedScale, clickedScale, t);
-        }
+    private void Start()
+    {
+        tween = new TweenedFloat(
+            CoroutineHost.Instance.gameObject.GetComponent<MonoBehaviour>(),
+            0f,
+            1f,
+            true,
+            duration,
+            curve
+        );
 
-        protected override State GetInitialState()
-        {
-            // Start unclicked.
-            return State.A;
-        }
+        tween.onTowardsMin.AddListener(UpdateScale);
+        tween.onTowardsMax.AddListener(UpdateScale);
+    }
 
-        protected override bool IsInteruptable()
-        {
-            // Must be interuptable, since someone might unclick
-            // before the clicked transition finishes.
-            return true;
-        }
-
-        protected override OnDisabledBehaviour BehaviourOnDisable()
-        {
-            // If this gameObject is disabled, just reset the
-            // button to the unclicked state.
-            return OnDisabledBehaviour.ToA;
-        }
-
-        public void OnPointerDown(PointerEventData data)
-        {
-            ToB();
-        }
-
-        public void OnPointerUp(PointerEventData data)
-        {
-            ToA();
-        }
+    private void UpdateScale(float clickAmount)
+    {
+        target.localScale = Vector3.one * Mathf.Lerp(unclickedScale, clickedScale, clickAmount);
     }
 }
+
+}  // namespace DSS.CoreUtils.Tweening

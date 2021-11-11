@@ -24,7 +24,7 @@ To the `scopedRegistries` section:
 To the `dependencies` section:
 
 ```
-"com.dss.core-utils": "1.6.8"
+"com.dss.core-utils": "1.6.9"
 ```
 
 After changes, the manifest file should look like below:
@@ -39,7 +39,7 @@ After changes, the manifest file should look like below:
     }
   ],
   "dependencies": {
-    "com.dss.core-utils": "1.6.8",
+    "com.dss.core-utils": "1.6.9",
     ...
 ```
 
@@ -111,7 +111,7 @@ A derivable class for singleton objects.
 
 ## Tweening
 
-Exposes an extensible "Tween" class that tweens between two values, with interuption support.
+Exposes an extensible "Tween" class that tweens between two values.
 
 - `ScaleOnClick`
-- `Tweener`
+- `TweenedFloat`

@@ -15,8 +15,7 @@ public class ScaleOnClickEditor : Editor
     SerializedProperty m_clickedScale;
 
     SerializedProperty m_duration;
-    SerializedProperty m_aCurve;
-    SerializedProperty m_bCurve;
+    SerializedProperty m_curve;
 
     
     protected virtual void OnEnable()
@@ -26,9 +25,7 @@ public class ScaleOnClickEditor : Editor
         m_clickedScale = serializedObject.FindProperty("clickedScale");
 
         m_duration = serializedObject.FindProperty("duration");    
-
-        m_aCurve = serializedObject.FindProperty("aCurve");    
-        m_bCurve = serializedObject.FindProperty("bCurve");  
+        m_curve = serializedObject.FindProperty("curve");    
     }
 
     public override void OnInspectorGUI()
@@ -55,8 +52,7 @@ public class ScaleOnClickEditor : Editor
         Section("Transition Options", () =>
         {
             EditorGUILayout.PropertyField(m_duration, new GUIContent("Transition Duration"), true);
-            EditorGUILayout.PropertyField(m_aCurve, new GUIContent("On Click Curve"), true);
-            EditorGUILayout.PropertyField(m_bCurve, new GUIContent("On Unclick Curve"), true);
+            EditorGUILayout.PropertyField(m_curve, new GUIContent("Transition Curve"), true);
         }, spaceAfter: true);
         
         serializedObject.ApplyModifiedProperties();

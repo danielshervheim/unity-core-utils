@@ -208,3 +208,7 @@
 ## 1.6.8
 
 - Added `TerrainExtensions` class for converting `Terrain` objects to `Texture2D` objects (which can be exported via `ImageConversion.EncodeAsEXR`).
+
+## 1.6.9
+
+- Replaced `Tweener` class with more flexible `TweenedFloat` class and updated `ScaleOnClick` to use it.
