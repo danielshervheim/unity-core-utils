@@ -212,3 +212,7 @@
 ## 1.6.9
 
 - Replaced `Tweener` class with more flexible `TweenedFloat` class and updated `ScaleOnClick` to use it.
+
+## 1.6.10
+
+- Fixed a potential null reference bug in `XmlNodeExtensions`.

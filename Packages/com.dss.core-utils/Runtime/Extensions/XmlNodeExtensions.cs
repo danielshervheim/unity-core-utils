@@ -10,12 +10,19 @@ public static class XmlNodeExtensions
     // @brief Returns wether or not the XmlNode has an attribute with the given name
     public static bool HasAttribute(this XmlNode node, string attributeName)
     {
-        foreach (XmlAttribute attribute in node.Attributes)
+        try
         {
-            if (attribute.Name.Equals(attributeName))
+            foreach (XmlAttribute attribute in node.Attributes)
             {
-                return true;
+                if (attribute.Name.Equals(attributeName))
+                {
+                    return true;
+                }
             }
+        }
+        catch (Exception)
+        {
+            return false;
         }
         return false;
     }
