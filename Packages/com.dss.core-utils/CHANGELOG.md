@@ -220,3 +220,7 @@
 ## 1.6.11
 
 - Added a `Value()` method to the `TweenedFloat` class to directly query the current tween value.
+
+## 1.6.12
+
+- Added `On Trigger` events class.
