@@ -71,6 +71,12 @@ public class TweenedFloat
         this.transitionState = startAtMin ? State.AtMin : State.AtMax;
     }
 
+    // @brief The current value.
+    public float Value()
+    {
+        return value;
+    }
+
     // @brief Wether or not the value is at the minimum.
     public bool AtMin()
     {

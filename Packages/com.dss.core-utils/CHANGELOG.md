@@ -216,3 +216,7 @@
 ## 1.6.10
 
 - Fixed a potential null reference bug in `XmlNodeExtensions`.
+
+## 1.6.11
+
+- Added a `Value()` method to the `TweenedFloat` class to directly query the current tween value.
